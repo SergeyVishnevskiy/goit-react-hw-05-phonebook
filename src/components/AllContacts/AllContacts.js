@@ -1,5 +1,5 @@
 import React from "react";
-import OneContact from "../OneContact/OneContact";
+import OnlyOneContact from "../OnlyOneContact/OnlyOneContact";
 import PropTypes from "prop-types";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import "./AllContacts.css";
@@ -13,7 +13,7 @@ const AllContacts = ({ contacts, filter, deleteContact }) => {
     <TransitionGroup component="ul">
       {filterContacts.map(({ name, number, id }) => (
         <CSSTransition key={id} timeout={250} classNames="listItem">
-          <OneContact
+          <OnlyOneContact
             key={id}
             name={name}
             number={number}
